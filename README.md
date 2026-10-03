@@ -1,47 +1,55 @@
-# Defect Vision (practice fork)
+# 🔍 DefectVision
 
+DefectVision is a motherboard defect detection system that uses **YOLOv11** to find defects on motherboards. It makes quality checking faster and more reliable than manual human inspection.
 
-[Live Demo](https://defect-vision.netlify.app/)
-[Video Demonstration](https://youtu.be/PCcpFBIT7W4)
+[Live Demo](https://defect-vision.netlify.app/) · [Video Demonstration](https://youtu.be/PCcpFBIT7W4)
 
-# 🚀 Next.js Application
+> Thesis project by [your names / team / school and year]
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## ✨ Features
 
----
+- Detects motherboard defects using a YOLOv11 model
+- Scan screen for running inspections (`Start Scanning`)
+- Results shown in data tables
+- [Add anything else: login, history, statistics...]
 
-## 🧰 Getting Started
+## 🧰 Tech Stack
 
-First, run the development server:
+- **Web app:** Next.js, TypeScript [confirm: Tailwind CSS, shadcn/ui]
+- **Database:** MongoDB
+- **Detection:** Python + YOLOv11 (`defect_vision_script.py`), running on a Raspberry Pi
+- **Hosting:** Netlify
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🗂️ Project Structure
+
+| Path | What it is |
+| --- | --- |
+| `src/` | Web app source code |
+| `public/` | Static assets |
+| `defect_vision_script.py` | Detection script that runs on the Raspberry Pi |
+
+## 🚀 Getting Started
+
+1. Clone the repo and install dependencies:
 ```
-Open http://localhost:3000 with your browser to see the result.
-
-You can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file.
-
-This project uses next/font to automatically optimize and load Geist, a new font family for Vercel.
-
-## 🗄️ Database Setup (MongoDB)
-This application requires a MongoDB database for storing data.
-
-1. Create a MongoDB Database
-- You can use MongoDB Atlas or host your own MongoDB instance.
-- Create a new database.
-- Copy the connection string (URI) provided by MongoDB.
-
-2. Configure Environment Variables
-Create a .env.local file in the root of your project and add the following:
+   npm install
 ```
-MONGODB_URI="your-mongodb-connection-uri-here"
-SESSION_SECRET="your-randomly-generated-session-secret"
+2. Create a `.env.local` file in the project root:
 ```
-Replace "your-mongodb-connection-uri-here" with your actual MongoDB URI.
-Replace "your-randomly-generated-session-secret" with a secure random string (you can generate one using tools like 1Password or openssl rand -hex 32).
+   MONGODB_URI="your-mongodb-connection-uri-here"
+   SESSION_SECRET="your-randomly-generated-session-secret"
+```
+3. Run the development server:
+```
+   npm run dev
+```
+4. Open http://localhost:3000
+
+## 🤖 Detection Script
+
+[Explain how to run `defect_vision_script.py`: required hardware, Python libraries, and the model file.]
+
+## 👥 Team
+
+- [Name] – [role]
+- [Name] – [role]
